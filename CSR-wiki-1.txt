@@ -1,0 +1,450 @@
+//********************************************************************************************************
+class xx{
+	DataSet ds = Transaction.getDataSet();
+	VOHelper.voToDataSet(vo, ds);
+	/*dataSetToMaps*/ List<Map> dataList = VOHelper.dataSetToMaps(ds); //多筆
+	/*dataSetToVOs*/ List<DTATP001> listDTATP001 = VOHelper.dataSetToVOs(DTATP001.class, ds); //多筆
+	/*dataSetToVO*/	DTATP001 vo = VOHelper.dataSetToVO(DTATP001.class, ds);//單筆 (:sourcend:)
+	DBUtil.executeUpdate(ds, SQL 001);
+    /* 單檔的功能也是使用 DataSet 操作，所以錯誤時也是會拋出 exception */
+	int updateCount = DBUtil.insertVO(vo);
+	/* 指定 select 的條件值 */
+	List list = DBUtil.retrieveVOs(vo);
+	/* 僅需指定 table 的 PK 值即可 */
+    int updateCount = DBUtil.delVO(vo);
+	
+	
+	DataSet ds = Transaction.getDataSet();
+	DataSet ds = Transaction.getDataSet();
+	ds.setField("RCV SER NO", rcvSerNo);
+	DBUtil.searchAndRetrieve(ds, SQL queryAreaList 001);
+	return VOHelper.dataSetToMaps(ds);
+	List<Map>  VOTool.findToMaps(ds, SQL queryAreaList 001);
+	String product main id = MapUtils.getString(map, "PRODUCT MAIN ID", "");
+	
+	
+	
+	DynamicDataSet 和 DataSet 唯一不同的地方在於，DataSet 的 SQL 來源是 DB 的 table， 而 DynamicDataSet 則是將傳進來的字串當為 SQL 命令來執行。
+	
+//帳密	
+	Bobe dbeb/dbeb654	
+
+//cc no permission解決	
+	gpupdate /force
+}
+//********************************************************************************************************
+	synchronized (AA A0Z071.class) {
+			DTCMZ035 voDTCMZ035 = (DTCMZ035) DBUtil.retrieveVOs(vo).get(0);
+			int len = Integer.parseInt(voDTCMZ035.getLENGTH());
+			int serialNo = Integer.parseInt(voDTCMZ035.getSERIAL NO())+1;
+			serNo = StringUtils.leftPad(String.valueOf(serialNo), len, "0");
+			// 取後流水號更新
+			updateDTCMZ035(vo);
+		}		
+		
+	private static void updateDTCMZ035(DTCMZ035 vo) throws ModuleException {
+		DataSet ds = Transaction.getDataSet();
+		VOHelper.voToDataSet(vo, ds);
+		DBUtil.executeUpdate(ds, SQL 001);
+	}	
+		
+	/**
+	 * key = com.cathayins.aa.a0.module.AA A0Z071.001
+	 * sql = 
+			UPDATE DBCM.DTCMZ035 SET SERIAL NO = SERIAL NO + 1 WHERE SYSTEM ID = ':SYSTEM ID' AND CATEGORY PREFIX = ':CATEGORY PREFIX' 
+			AND CATEGORY = ':CATEGORY' AND USE TYPE = ':USE TYPE' AND INSRNCE AREA NO = ':INSRNCE AREA NO'
+	 */		
+		
+	validateNonBlankParam(systemId, "未傳入系統別");
+	validateNonBlankParam(category, "未傳入編號子目");
+	validateNonBlankParam(useType, "未傳入使用種類");
+	validateNonBlankParam(divNo, "未傳入單位代號");		
+		
+	
+
+	//執行 db 異動的標準寫法, 就算要執行的SQL只有1筆, 仍務必要做 Transaction 控制
+	try {
+		Transaction.begin();
+		mod.confirm(params);//主要動作寫在 module 裡
+		Transaction.commit();
+	} 
+	catch (Exception e) {
+		Transaction.rollback();
+		throw e;
+	}
+
+
+	//*****************  << prototype DOM***************************************************************************************
+	var tr = new Element('tr', {align : 'center', className : index%2 ? 'tbBlue2' : 'tbYellow2'}); //※跳色要自己處理!!!
+	tr.insert(new Element('td', {width : '8%'}).update(vo.MOD NAME));		
+	$('TBODY RESULT').insert(tr);	
+	
+	//********************************************************************************************************
+	var pageScroll;
+	//每次查詢前，先清除畫面上資料，呼叫clear if(pageScroll) pageScroll.clear(); //清除資料table
+	var param = {}; 
+	//參數 param.DATA = voList; //資料陣列 param.TABLE HEADER = 'TABLE HEADER'; 
+	//表頭table param.TABLE DATA = 'TABLE DATA'; //資料table param.TR SORT = 'SORT TITLE'; 
+	//排序的TR(若多個TR，則以陣列傳入)，使用方法同 pageController param.SEARCH ENABLE = true; 
+	//搜尋列(預設關閉) param.HEIGHT = 250; //資料區塊固定高度(預設200px) param.RENDER FUNCTION = //顯示資料的實作
+	
+	
+	
+	//**************  <<JSP>> ******************************************************************************************
+	resp.addOutputData("ACTION", "UPDATE");
+	// 按鍵控制
+	buttons.buttonControl('${ACTION}');
+	resp.ACTION
+	//BEAN到前端
+	<%
+	HttpResponseContext resp = new HttpResponseContext(request);
+	String s date = resp.getOutputData("S DATE")!=null ? (String) resp.getOutputData("S DATE") : "";
+	%>
+	var isPTS=<%=isPTS%>;
+	resp.addOutputData("HISTORY",converter.marshall(map));
+	resp.addOutputData("saveSuccess", Boolean.TRUE);
+	if(resp.saveSuccess)
+	
+	//前端到BEAN
+	formObj.insert(new Element('input', {'type' : 'hidden', 'name' : 'SETTLE NO', 'value' : tr.vo.SETTLE NO}));
+	formObj.insert(new Element('input', {'type' : 'hidden', 'name' : 'INSRNCE TYPE', 'value' : insrnceType}));
+	formObj.insert(new Element('input', {'type' : 'hidden', 'name' : 'QUERY MAP', 'value' : Object.toJSON(queryMap)}));	String settleNo = req.getParameter("SETTLE NO");
+	String insrnceType = req.getParameter("INSRNCE TYPE"); 
+	Map<String,String> 	v001Map = JSONHelper.toMap(req.getParameter("QUERY MAP"));
+	new Ajax.Request(
+			webcontext + type, 
+		{
+		parameters: $('form1').serialize(),})
+	
+	$('form1').action = '<%=request.getContextPath()%>/servlet/HttpDispatcher/ADB0 1800/queryData2Csv?'+Object.toQueryString(param); //var param =$H();
+	// 2017-03 @PG勝偉
+	
+	$A(list).each(
+	function (vo, index) {
+		if (!Object.isHash(vo)) {
+			vo = $H(vo);
+		}
+		PROJECT CODE = O2S(vo.get('PROJECT CODE'));//專案代號
+		ISSHOW CHANNEL COMMISN= PRODCUT POLICY CODE.match('FFA') && !PROJECT CODE.match('NAA');//true=不呈現
+	});
+	
+	//***************** <<map-json給值 ***************************************************************************************
+	Map<String,String> map =  JSONHelper.toMap(req.getParameter("QUERY MAP"));
+	resp.addOutputData("HISTORY",converter.marshall(map));	
+	Object HISTORY =  ObjectUtils.defaultIfNull(resp.getOutputData("HISTORY"), "[]");
+	var HISTORY = $H(<%=HISTORY%>);
+	HISTORY.set(' SETTLE NO',$('SETTLE NO').innerText);
+	alert(HISTORY.get(' SETTLE NO'));
+
+	//voDTPAP701 -->前 帶值至 後
+	var voDTPAP701 = new Hash();
+	voDTPAP701.set('INSURED REPRSNT NAME', $F('CUSTOMER NAME OF INSURED')); //set值
+	voDTPAP701.set('TOTAL RMBSMNT', new Number($F('RMBSMNT')) * 10000);//set值
+	parameters:{ //ajax.Request
+		voDTPAP701 : Object.toJSON(voDTPAP701),...}
+	DTPAP701 voDTPAP701 = (DTPAP701) JSONHelper.toVo(DTPAP701.class, req.getParameter("voDTPAP701"));
+	//voDTPAP701 -->後 帶值至 前
+	resp.addOutputData("DTPAP701", converter.marshall(module.getDTPAP701(contractNo)));
+	var DTPAP701 = <%=resp.getOutputData("DTPAP701")%>
+	
+	//List<Map> Foreach
+	<%
+	List<Map<String, String>> marineList;
+	Object MARINE LIST = ObjectUtils.defaultIfNull(resp.getOutputData("MARINE LIST"), "[]");
+	%>
+	var MARINE LIST = $A(<%=MARINE LIST%>);
+	MARINE LIST.each(
+		function(vo, index) {
+			validator.define('textbox '+vo.FIELD CONTAIN, vo.FIELD NAME+'自負額', '必填', 'num');
+		}
+	)
+	
+	
+	$('TD DEAL NO').innerText = DTPAP701.DEAL NO ? DTPAP701.DEAL NO : '';
+	
+	//***************** <<vo-json給值 ***************************************************************************************
+List<DTADZ068> result = mod.queryDTADZ068All();
+resp.addOutputData("DTADZ068", result); //SETTER
+var DTADZ068_LIST = [];
+DTADZ068_LIST = resp.DTADZ068; //ajax.request GETTER
+$('DTADZ068_LIST').value = Object.toJSON(DTADZ068_LIST) ;
+
+List<Map> result= mod.getGatherCertify(AGENT ID);
+resp.addOutputData("GATHER_CERTIFY", result);
+var GATHER_CERTIFY=$A(resp.GATHER_CERTIFY);	
+alert("73:"+GATHER_CERTIFY.last()['GATHER_CERTIFY']); //取法1 --
+var gmap=$H(GATHER_CERTIFY.last()); //取法2 --$H()
+alert("73:"+gmap.get('GATHER_CERTIFY'));
+
+
+jsonStr = conver.marshall(rosterVo).toString();  
+			resp.addOutputData("ROSTER", jsonStr);
+ROSTER = '<%=ObjectUtils.defaultIfNull(resp.getOutputData("ROSTER"), "{}")%>'.evalJSON();	//json字串轉物件
+	
+	//***************** <<HttpResponseContext session  ***************************************************************************************
+Map<String, String> map	
+TxBean.putValue("viewData", map);	
+	
+<%
+	log.debug(">>>>>>>>>>> EDB30100.jsp ----- ");
+	HttpTxContext txCxt = new HttpTxContext(session);
+	HttpResponseContext resp = new HttpResponseContext(request);	
+
+	// 從 Server Site 傳送過來的參數
+	Map viewData = (Map)txCxt.getValue("viewData");
+	pageContext.setAttribute("viewData", viewData);	
+%>
+	<input name="RCPT_NO" id="RCPT_NO" type="text" class="textBox2" size="17" 	
+		maxlength="15" value="<c:out value="${viewData.RCPT_NO}" />" > 
+	
+	//***************** <<Ajax.Request ***************************************************************************************
+	new Ajax.Request(
+	webcontext + 'query',
+	{
+		parameters:Form.serialize("form1"),}...)
+			
+	DTADZ052 vo = (DTADZ052)VOHelper.requestToVO(DTADZ052.class, req);
+	
+	//***************** <<雜記  ***************************************************************************************
+	
+	
+	"C:\Program Files (x86)\IBM\SDP\eclipse.exe" -product com.ibm.rational.rad.product.v9.ide
+	\\10.176.2.56\暫存區
+	
+	Menu最多權限者 -> A124243624	林○毅	01A4301	資訊一科
+	QP(新) pwd:123456
+	工作切換
+	問題單 ->附winmerge file
+	開發單 -> codeReview
+	上版(checkIN | add to source control) -> 轉單SA
+	java + xml + jsp +mod
+	模組 ->Z 批次 -> B9
+	BOBE資料庫 dbeb/dbeb654
+	
+	ReportServe  
+	-> INS for本機 | @COM for上版
+	-> 字型檔 覆蓋中文字型2檔案
+	-> add參數順序要固定
+	sample->  AAHZ301 + ABZ1Z723
+	-> ZR SRC要加進部署
+	
+	//殺程序
+	taskkill /f /im clearviewupdate.exe
+	D:/svr09800006 view/
+	// 2017-02 @PG勝偉 @SA洪琳翔 
+	
+	//*************<<批次*******************************************************************************************
+ARP0 9007
+ //遇到：(from ADT3 B700) OnlineCallBatch:資料重複 批次程式已在執行中, EXEC UNIT=ControlM排程
+ DBZZ.DTZZX005 砍掉把batch id ADT3 B700 砍掉就好
+ 
+DTZZX2AD 批次log
+
+	
+	//*************<<Utils*******************************************************************************************
+D:\svr09800006 view\System LIB\TestCase\src\com\cathayins\at\t1\module\RunCreate.java	
+import static com.cathayins.common.util.ValidateUtils.validateNonBlankParam;
+停用 com.cathay.util.VOUtil
+//從map取值並做轉換
+Tools.O2S(dataMap.get("PARAP VALUE"));
+MapUtils.getString(resultMap, "POLICY NO");
+mapTmp = VOTool.jsonToMap(jsonString); JSONObject存放key-value再toString()
+boolean isVerify = BooleanUtils.toBoolean(req.getParameter("IS VERIFY"));
+
+import static com.cathayins.common.util.ValidateUtils.validateNonBlankParam; //required
+validateNonBlankParam(vo.getBROKER NO(), "未傳入經紀人代碼");
+
+DTADZ068 LOG voDTADZ068 LOG = (DTADZ068 LOG) VOHelper.copyProperties(voDTADZ068, DTADZ068 LOG.class); //複製
+
+Q: 受理編號產生器 在哪?	
+
+	D:\svr09800006 view\System AT\doc\參考資料\傷害健康險\20.測試\2003.小工具	
+Q:判斷VO內容值是否全都為空	
+Q:善用ExceptionHelper.getExceptionStack 處理exception 錯誤訊息
+	String msg2 = ExceptionHelper.getExceptionStack(e, 999); // 999表是堆疊筆數上限
+	logger.error("這也是錯誤訊息::" + msg2);	
+Q: 簡單方法讓CSS顯示
+	<link href="/INSATWeb/html/CM/css/cm.css" rel="stylesheet" type="text/css">	 此方法只限本機測試，上版前要改回來
+	<link href="<%=request.getContextPath()%>/html/CM/css/cm.css" rel="stylesheet" type="text/css">	
+Q:map 轉ds?(map與ds的名稱皆相同時使用)	
+	VOTool.mapToDataSet(map, ds);	
+	VOUtil.mapNotBlankToDataSet(map, ds);	
+
+//****************<<RAD工具****************************************************************************************
+沒有ant情況修改路徑
+	D:\svr09800006 view\System EP\source\usr\ebaf\config\service\CryptoSvc.xml
+	D:\svr09800006 view\System EP\source\usr\ebaf\config\txHandler\default.xml
+	D:\svr09800006 view\System EP\source\INSEPWeb\WebContent\WEB-INF\web.xml	
+	
+//****************<<匯出****************************************************************************************
+List<Map> sql 0022 = this.getSQL 002(brokerNo);
+String str = ParseUtils.formatterMap2String(sql 0022); 
+resp = this.doDownload(req, str, "DTADZ051.CSV");	
+	/*----------------處理千分位、錢字號---------------------*/
+	private DecimalFormat moneyFormater = new DecimalFormat("###,###");//千分位
+	mapTmp.put("DEATH DISABLER AMOUNT", "$" + moneyFormater.format(Tools.O2Big(mapTmp.get("DEATH DISABLER AMOUNT"))));
+	new BigDecimal(ObjectUtils.toString(bqds.getField("COMMISN RATE"))).divide(new BigDecimal(5),4,BigDecimal.ROUND HALF UP).toString(); //通路費CHANNEL COMMISN= DTADE002.COMMISN RATE*3/7 (取4位小數);
+
+//***************** <<險種***************************************************************************************
+險種	 
+C:車險	
+F:火險	
+M:水險	
+N:新種險	
+H:健康險	
+P:傷害險
+ADB0
+L222032026	林○慧	01A4303	資訊三科
+
+//**************** << JS ****************************************************************************************
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+HTMLElement.prototype.next = function() {
+	var elem = this;
+	do {
+	elem = elem.nextSibling;
+	} while ( elem && elem.nodeType != 1 );
+	return elem;
+};
+
+addEvent(window, "load", function() {
+	// Perform HTML DOM operations
+	next( id("everywhere") ).style.background = 'blue';
+});
+
+function id(name) {
+return document.getElementById(name);
+}
+function tag(name, elem) {
+// If the context element is not provided, search the whole document
+return (elem || document).getElementsByTagName(name);
+}
+
+/*=== Retreiving the Text Contents of an Element ====*/
+function text(e) {
+	var t = "";
+	// If an element was passed, get its children,
+	// otherwise assume it's an array
+	e = e.childNodes || e;
+	// Look through all child nodes
+	for ( var j = 0; j < e.length; j++ ) {
+		// If it's not an element, append its text value
+		// Otherwise, recurse through all the element's children
+		t += e[j].nodeType != 1 ?
+		e[j].nodeValue : text(e[j].childNodes);
+	}
+	// Return the matched text
+	return t;
+}
+function hasAttribute( elem, name ) {
+return elem.getAttribute(name) != null;
+}
+
+function prev( elem ) {
+do {
+elem = elem.previousSibling;
+} while ( elem && elem.nodeType != 1 );
+return elem;
+}
+function next( elem ) {
+do {
+elem = elem.nextSibling;
+} while ( elem && elem.nodeType != 1 );
+return elem;
+}
+function first( elem ) {
+elem = elem.firstChild;
+return elem && elem.nodeType != 1 ?
+next ( elem ) : elem;
+}
+function last( elem ) {
+elem = elem.lastChild;
+return elem && elem.nodeType != 1 ?
+prev ( elem ) : elem;
+}
+function parent( elem, num ) {
+num = num || 1;
+for ( var i = 0; i < num; i++ )
+if ( elem != null ) elem = elem.parentNode;
+return elem;
+}
+
+
+function create( strElem ) {
+	return document.createElementNS ?
+	document.createElementNS( 'http://www.w3.org/1999/xhtml', strElem ) :
+	document.createElement( strElem );
+}
+/*=== Converting an Array of Mixed DOM Node/HTML String Arguments into a Pure Array of DOM Nodes ====*/
+function checkElem(a) {
+	var r = [];
+	// Force the argument into an array, if it isn't already
+	if ( a.constructor != Array ) a = [ a ];
+	for ( var i = 0; i < a.length; i++ ) {
+		// If there's a String
+		if ( a[i].constructor == String ) {
+			// Create a temporary element to house the HTML
+			var div = document.createElement("div");
+			// Inject the HTML, to convert it into a DOM structure
+			div.innerHTML = a[i];
+			// Extract the DOM structure back out of the temp DIV
+			for ( var j = 0; j < div.childNodes.length; j++ )
+				r[r.length] = div.childNodes[j];
+		} else if ( a[i].length ) { // If it's an array
+			// Assume that it's an array of DOM Nodes
+			for ( var j = 0; j < a[i].length; j++ )
+				r[r.length] = a[i][j];
+		} else { // Otherwise, assume it's a DOM Node
+			r[r.length] = a[i];
+		}
+	}
+	return r;
+}
+/*
+ex: append( tag("ol")[0], "<li>Mouse trap.</li>" );
+*/
+function append( parent, strElem ) {
+	var elems = checkElem( strElem );
+	for ( var i = 0; i < elems.length; i++ ) {
+		parent.appendChild( elems[i] );
+	}
+}
+/*=== Inserting an Element Before Another Element ====*/
+function before( parent, before, elem ) {
+	if ( elem == null ) {
+		elem = before;
+		before = parent;
+		parent = before.parentNode;
+	}
+	var elems = checkElem( elem );
+	for ( var i = elems.length - 1; i >= 0; i-- ) {
+		parent.insertBefore( elems[i], before );
+	}
+}
+
+function remove( elem ) {
+	if ( elem ) elem.parentNode.removeChild( elem );
+}
+function empty( elem ) {
+	while ( elem.firstChild )
+		remove( elem.firstChild );
+}
+
+
+
+
+
+
+//********************************************************************************************************
+
+
+	
+	
+	
+
+
+
+
+
+
+	
+		
